@@ -1,34 +1,93 @@
 /**
  * Example store structure
  */
-const questionBank = {
- 
-  questions: [
-    {
-      question: 'What color is broccoli?',
-      answers: [
-        'red',
-        'orange',
-        'pink',
-        'green'
-      ],
-      correctAnswer: 'green'
-    },
-    {
-      question: 'What is the current year?',
-      answers: [
-        '1970',
-        '2015',
-        '2019',
-        '2005'
-      ],
-      correctAnswer: '2019'
-    }
-  ],
-  quizStarted: false,
-  questionNumber: 0,
-  score: 0
-};
+let questionCounter = 0;
+let score = 0;
+const questionsArray = [
+  {
+    question: "1. What Is Dwayne Johnsons Net Worth?",
+    one: "80 Million",
+    two: "120 Million",
+    three: "250 Million",
+    four: "320 Million",
+    correctAnswer: "320 Million"
+  },
+  {
+    question: "2. Which Year Did Paul Walker Die?",
+    one: "2013",
+    two: "2003",
+    three: "2018",
+    four: "2009",
+    correctAnswer: "2013"
+  
+  },
+  {
+    question: "3. Who Sings The Chicka Chicka Slim Shady Song?",
+    one: "Drake",
+    two: "Lil Wayne",
+    three: "50 Cent",
+    four: "Eminem",
+    correctAnswer: "Eminem"
+    
+  },
+  {
+    question: "4. What Is The Name Of The School In The Breakfast Club?",
+    one: "Beverly High",
+    two: "Shermer High",
+    three: "Houston County High",
+    four: "Montgomery High",
+    correctAnswer: "Shermer High"
+  },
+  {
+    question: "5. In What Year Did Brad Pitt Turn 30 Years Old?",
+    one: "2003",
+    two: "2008",
+    three: "1999",
+    four: "2010",
+    correctAnswer: "2003"
+  },
+  {
+    question: "6. Which Celebrity Is Known As JLo?",
+    one: "John Lennon",
+    two: "Jennifer Lopez",
+    three: "Jared Leto",
+    four: "Justin Long",
+    correctAnswer: "Jennifer Lopez"
+  },
+  {
+    question: "7. Who Was People Magazine Sexiest Man Alive in 1991?",
+    one: "Brad Pitt",
+    two: "Blake Shelton",
+    three: "Patrick Swayze",
+    four: "George Strait",
+    correctAnswer: "Patrick Swayze"
+  },
+  {
+    question: "8. What Is Drew Barrymore's Real Middle Name?",
+    one: "Beth",
+    two: "Mckenzie",
+    three: "Leah",
+    four: "Blyth",
+    correctAnswer: "Blyth"
+  },
+  {
+    question: "9. How Old Was Russell Crowe When He Got His First Lead Role In A Film?",
+    one: "18",
+    two: "25",
+    three: "20",
+    four: "16",
+    correctAnswer: "25"
+  },
+  {
+    question: "10. Brothers Taylor, Isaac, Zac Make Up Which Band?",
+    one: "ZZ Top",
+    two: "The Police",
+    three: "Hanson",
+    four: "Green Day",
+    correctAnswer: "Hanson"
+  }
+  ];
+
 
 function handleStartButton()
 //this function handles the button that takes you to the first page of the quiz
