@@ -10,6 +10,7 @@ body{
 header{
   border: 2px solid white;
   border-radius: 10px;
+  box-shadow: 5px 5px #00000088;
   text-align: center;
   height: 120px;
   margin: 20px;
@@ -25,19 +26,20 @@ h1 {
   font-size: 40px;
 }
 
-.start-section, .end-section, .popup-box{
+.start-section, .end-section, .popup-box, .submit{
    color: white;
    font-size: 25px;
    background-color: black;
 }
 
-.start-section, .end-section{
+.start-section, .end-section, .submit{
   padding: 20px;
   text-align: center;
   border-radius: 15px;
   margin: 0 auto;
   max-width: 500px;
   border: 2px solid white;
+  box-shadow: 5px 5px #00000088;
 }
 .start-button{
   background-color: blue;
@@ -53,13 +55,15 @@ h1 {
   background-color: green;
 }
 .quiz-box{
+  color: white;
   margin: 0 auto;
   max-width: 600px;
   padding: 30px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   border-radius: 15px;
+  border: 2px solid #ffffff;
   margin-top: 20px;
-  box-shadow: 5px 5px #a3c2c2;
+  box-shadow: 5px 5px #00000088;
   position: relative;
 }
 
@@ -74,6 +78,7 @@ h1 {
   left: 450px;
   top: 10px;
   margin: 0px;
+  box-shadow: 5px 5px #00000088;
 }
 
 .score-card{
@@ -82,27 +87,37 @@ h1 {
  top: 25px;
  font-weight: bold;
  font-size: 20px;
+ box-shadow: 5px 5px #00000088;
 }
 
 .questions-form p{
   font-size: 18px;
 }
 .options{
+  background-color: black;
   display: block;
-  border: 1px solid #e0e0d1;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   margin: 10px;
-  padding: 5px;
+  padding: 20px;
   font-size: 16px;
+  box-shadow: 5px 5px #00000088;
 }
-
 .submit-button{
+  color: white;
+  background-color: blue;
   border-radius: 10px;
-  font-size: 15px;
+  border: 2px solid white;
+  font-size: 25px;
   padding: 5px;
   margin: 0 auto;
   display: block;
 }
+
+.submit-button:hover {
+background-color: green;
+}
+
 .feedback-section{
   height: 100%;
   width: 100%;
