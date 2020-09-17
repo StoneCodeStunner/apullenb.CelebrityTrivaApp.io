@@ -1,78 +1,95 @@
-
 const correctAnswerIcon = "http://billionairesbayou.net/wp-content/uploads/2016/10/man-with-check-sign-05-1-300x300.png";
 const wrongAnswerIcon= "http://ppcplans.com/wp-content/uploads/2011/09/negative_keywords-man.jpg";
 const warningIcon = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7WP9E3LDA10kP2Rk2enw-_kjI-iJd4kny8yH2kTrPR8hgrwtBg";
 
 let questionCounter = 0;
 let score = 0;
-let questionsArray = [
+const questionsArray = [
   {
-    question: "1. You work on a Javascript project. How do you prompt users with messages and at the same time requesting user inputs?",
-     optionone: "Alert()",
-    optiontwo: "Display()",
-    optionthree: "Prompt()",
-    optionfour: "Confirm()",
-    correctAnswer: "Prompt()"
+    question: "1. What Is Dwayne Johnsons Net Worth?",
+    one: "80 Million",
+    two: "120 Million",
+    three: "250 Million",
+    four: "320 Million",
+    correctAnswer: "320 Million"
   },
   {
-     question: "2. Which of the following function of Array object reverses the order of the elements of an array?",
-    optionone: "reverse()",
-    optiontwo: "push()",
-    optionthree: "reduceRight()",
-    optionfour: "reduce()",
-    correctAnswer: "reverse()"
+    question: "2. Which Year Did Paul Walker Die?",
+    one: "2013",
+    two: "2003",
+    three: "2018",
+    four: "2009",
+    correctAnswer: "2013"
   
   },
   {
-     question: "3. What statement supplies the value of a function?",
-    optionone: "continue",
-    optiontwo: "return",
-    optionthree: "cancel",
-    optionfour: "valueOf",
-    correctAnswer: "return"
+    question: "3. Who Sings The Chicka Chicka Slim Shady Song?",
+    one: "Drake",
+    two: "Lil Wayne",
+    three: "50 Cent",
+    four: "Eminem",
+    correctAnswer: "Eminem"
     
   },
   {
-    question: "4. How do you find the number with the highest value of x and y?",
-    optionone: "Math.max(x, y)",
-    optiontwo: "top(x, y)",
-    optionthree: "ceil(x, y)",
-    optionfour: "Math.ceil(x, y)",
-    correctAnswer: "Math.max(x, y)"
+    question: "4. What Is The Name Of The School In The Breakfast Club?",
+    one: "Beverly High",
+    two: "Shermer High",
+    three: "Houston County High",
+    four: "Montgomery High",
+    correctAnswer: "Shermer High"
   },
   {
-    question: "5. Inside which HTML element do we put the JavaScript?",
-    optionone: "<javascript>",
-    optiontwo: "<js>",
-    optionthree: " <scripting>",
-    optionfour: "<script>",
-    correctAnswer: "<script>"
+    question: "5. In What Year Did Brad Pitt Turn 30 Years Old?",
+    one: "2003",
+    two: "2008",
+    three: "1999",
+    four: "2010",
+    correctAnswer: "2003"
   },
   {
-    question: "6. How does a FOR loop start?",
-    optionone: "for (i = 0; i <= 5)",
-    optiontwo: "for (i = 0; i <= 5; i++)",
-    optionthree: "for i = 1 to 5",
-    optionfour: "for (i <= 5; i++)",
-    correctAnswer: "for (i = 0; i <= 5; i++)"
-  },
-   {
-    question: "7. How do you create a function in JavaScript?",
-    optionone: "function = myFunction()",
-    optiontwo: "function:myFunction()",
-    optionthree: "function myFunction()",
-    optionfour: "function - myFunction()",
-    correctAnswer: "function myFunction()"
+    question: "6. Which Celebrity Is Known As JLo?",
+    one: "John Lennon",
+    two: "Jennifer Lopez",
+    three: "Jared Leto",
+    four: "Justin Long",
+    correctAnswer: "Jennifer Lopez"
   },
   {
-    question: "8. How to write an IF statement in JavaScript?",
-    optionone: "if i = 5",
-    optiontwo: "if i == 5 then",
-    optionthree: "if i = 5 then",
-    optionfour: "if (i == 5)",
-    correctAnswer: "if (i == 5)"
+    question: "7. Who Was People Magazine Sexiest Man Alive in 1991?",
+    one: "Brad Pitt",
+    two: "Blake Shelton",
+    three: "Patrick Swayze",
+    four: "George Strait",
+    correctAnswer: "Patrick Swayze"
+  },
+  {
+    question: "8. What Is Drew Barrymore's Real Middle Name?",
+    one: "Beth",
+    two: "Mckenzie",
+    three: "Leah",
+    four: "Blyth",
+    correctAnswer: "Blyth"
+  },
+  {
+    question: "9. How Old Was Russell Crowe When He Got His First Lead Role In A Film?",
+    one: "18",
+    two: "25",
+    three: "20",
+    four: "16",
+    correctAnswer: "25"
+  },
+  {
+    question: "10. Brothers Taylor, Isaac, Zac Make Up Which Band?",
+    one: "ZZ Top",
+    two: "The Police",
+    three: "Hanson",
+    four: "Green Day",
+    correctAnswer: "Hanson"
   }
   ];
+
+
 
 let questionsCount = questionsArray.length; 
 
@@ -85,9 +102,8 @@ function handleStartClick(){
 		$('.end-section').hide();
 		$('.quiz-box').fadeIn("slow");
 		renderQuizBox(); 
-
 })
-
+}
 function renderQuizBox() {
 // Displays the Question, answer choices, progress, and score
   renderQuestionsCount();
