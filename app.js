@@ -7,84 +7,84 @@ let score = 0;
 const questionsArray = [
   {
     question: "1. What Is Dwayne Johnsons Net Worth?",
-    one: "80 Million",
-    two: "120 Million",
-    three: "250 Million",
-    four: "320 Million",
+    optionone: "80 Million",
+    optiontwo: "120 Million",
+    optionthree: "250 Million",
+    optionfour: "320 Million",
     correctAnswer: "320 Million"
   },
   {
     question: "2. Which Year Did Paul Walker Die?",
-    one: "2013",
-    two: "2003",
-    three: "2018",
-    four: "2009",
+    optionone: "2013",
+    optiontwo: "2003",
+    optionthree: "2018",
+    optionfour: "2009",
     correctAnswer: "2013"
   
   },
   {
     question: "3. Who Sings The Chicka Chicka Slim Shady Song?",
-    one: "Drake",
-    two: "Lil Wayne",
-    three: "50 Cent",
-    four: "Eminem",
+    optionone: "Drake",
+    optiontwo: "Lil Wayne",
+    optionthree: "50 Cent",
+    optionfour: "Eminem",
     correctAnswer: "Eminem"
     
   },
   {
     question: "4. What Is The Name Of The School In The Breakfast Club?",
-    one: "Beverly High",
-    two: "Shermer High",
-    three: "Houston County High",
-    four: "Montgomery High",
+    optionone: "Beverly High",
+    optiontwo: "Shermer High",
+    optionthree: "Houston County High",
+    optionfour: "Montgomery High",
     correctAnswer: "Shermer High"
   },
   {
     question: "5. In What Year Did Brad Pitt Turn 30 Years Old?",
-    one: "2003",
-    two: "2008",
-    three: "1999",
-    four: "2010",
+    optionone: "2003",
+    optiontwo: "2008",
+    optionthree: "1999",
+    optionfour: "2010",
     correctAnswer: "2003"
   },
   {
     question: "6. Which Celebrity Is Known As JLo?",
-    one: "John Lennon",
-    two: "Jennifer Lopez",
-    three: "Jared Leto",
-    four: "Justin Long",
+    optionone: "John Lennon",
+    optiontwo: "Jennifer Lopez",
+    optionthree: "Jared Leto",
+    optionfour: "Justin Long",
     correctAnswer: "Jennifer Lopez"
   },
   {
     question: "7. Who Was People Magazine Sexiest Man Alive in 1991?",
-    one: "Brad Pitt",
-    two: "Blake Shelton",
-    three: "Patrick Swayze",
-    four: "George Strait",
+    optionone: "Brad Pitt",
+    optiontwo: "Blake Shelton",
+    optionthree: "Patrick Swayze",
+    optionfour: "George Strait",
     correctAnswer: "Patrick Swayze"
   },
   {
     question: "8. What Is Drew Barrymore's Real Middle Name?",
-    one: "Beth",
-    two: "Mckenzie",
-    three: "Leah",
-    four: "Blyth",
+    optionone: "Beth",
+    optiontwo: "Mckenzie",
+    optionthree: "Leah",
+    optionfour: "Blyth",
     correctAnswer: "Blyth"
   },
   {
     question: "9. How Old Was Russell Crowe When He Got His First Lead Role In A Film?",
-    one: "18",
-    two: "25",
-    three: "20",
-    four: "16",
+    optionone: "18",
+    optiontwo: "25",
+    optionthree: "20",
+    optionfour: "16",
     correctAnswer: "25"
   },
   {
     question: "10. Brothers Taylor, Isaac, Zac Make Up Which Band?",
-    one: "ZZ Top",
-    two: "The Police",
-    three: "Hanson",
-    four: "Green Day",
+    optionone: "ZZ Top",
+    optiontwo: "The Police",
+    optionthree: "Hanson",
+    optionfour: "Green Day",
     correctAnswer: "Hanson"
   }
   ];
@@ -100,7 +100,7 @@ function handleStartClick(){
 		$('.progress-section').show();
 		$('.start-section').hide();
 		$('.end-section').hide();
-		$('.quiz-box').fadeIn("slow");
+		$('.quiz-box').show();
 		renderQuizBox(); 
 })
 }
@@ -123,16 +123,16 @@ $(".progress-section .question-count").text(`Question ${questionCounter+1} of ${
 function renderQuestion() {
 // Displays the next question
 
-  $(".questions-form").text(questionsArray[questionCounter].question);
-  $(".questions-form #option-one").val(questionsArray[questionCounter].optionone);
-  $(".questions-form #option-two").val(questionsArray[questionCounter].optiontwo);
-  $(".questions-form #option-three").val(questionsArray[questionCounter].optionthree);
-  $(".questions-form #option-four").val(questionsArray[questionCounter].optionfour);
+  $(".questions-form p").text(questionsArray[questionCounter].question);
+  $(".questions-form #optionone").val(questionsArray[questionCounter].optionone);
+  $(".questions-form #optiontwo").val(questionsArray[questionCounter].optiontwo);
+  $(".questions-form #optionthree").val(questionsArray[questionCounter].optionthree);
+  $(".questions-form #optionfour").val(questionsArray[questionCounter].optionfour);
    
-  $(".questions-form #option-one").next().text(questionsArray[questionCounter].optionone);
-  $(".questions-form #option-two").next().text(questionsArray[questionCounter].optiontwo);
-  $(".questions-form #option-three").next().text(questionsArray[questionCounter].optionthree);
-  $(".questions-form #option-four").next().text(questionsArray[questionCounter].optionfour);
+  $(".questions-form #optionone").next().text(questionsArray[questionCounter].optionone);
+  $(".questions-form #optiontwo").next().text(questionsArray[questionCounter].optiontwo);
+  $(".questions-form #optionthree").next().text(questionsArray[questionCounter].optionthree);
+  $(".questions-form #optionfour").next().text(questionsArray[questionCounter].optionfour);
 }
 
 
@@ -152,7 +152,7 @@ $('.js-submit-button').on('click',function(event){
 });
 }
 
-function checkAnswer() {
+function checkAnswer(selected) {
 // Compares the input to the correct answer
 // If the correct answer is selected, the popup with the correct answer is displayed
 // If the wrong answer is selected, the incorrect answer popup is displayed with the correct answer
@@ -166,7 +166,7 @@ let rightAnswer = questionsArray[questionCounter].correctAnswer;
    displayPopup(false, rightAnswer);
   }
 }
-function displayPopup() {
+function displayPopup(statusFlag, answer) {
 // Contains the code for displaying the popup
 $('.feedback-section').show();
 if(statusFlag){
@@ -195,10 +195,10 @@ $('.js-close-button').on('click', function(event){
   console.log("handlePopupClose() ran");
   $('.popup-box').hide();
   $('.feedback-section').hide();
-  $('.quiz-box').hide().fadeIn();
+  $('.quiz-box').hide();
   questionCounter++;
   if(questionCounter < questionsArray.length) {
-     $('.quiz-box').fadeIn();
+     $('.quiz-box').show();
      renderQuizBox();
   }
   else{
@@ -209,7 +209,7 @@ $('.js-close-button').on('click', function(event){
 }
 function displayFinalScore() {
 // Displays the final score and has a button to restart the quiz
-$('.end-section').fadeIn(1000);
+$('.end-section').show();
 $('.end-section h4').text(`Your Score is: ${score}/${questionsCount}`);
 $('.correct .count' ).text(score);
 $('.wrong .count').text(questionsCount - score);
@@ -224,7 +224,7 @@ function handleStartOver(){
   $('.js-startover-button').on('click',function(event){
     console.log("handleStartOver() ran");
     $('.end-section').hide();
-    $('.quiz-box').fadeIn();
+    $('.quiz-box').show();
     renderQuizBox();
   });
 }
