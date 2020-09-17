@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Quiz App</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
     type="text/css" />
@@ -13,11 +13,90 @@
 
 <body>
   <header>
-    <h1>The name of your quiz</h1>
+    <h1>Celebrity Trivia</h1>
   </header>
-  <main></main>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
-  <script src="app.js"></script>
-</body>
+  <main role="main">
+    <section class="start-section">
+      <p>Hello! Welcome to Celebrity Trivia</p>
+      <input type="button" value="Start" class="start-button js-start-button" />
+    </section>
 
+    <div class="quiz-box">
+      <div class="progress-section">
+        <span class="question-count"></span>
+        <hr />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_wbUm1vMiakLbNj1q4biA8lro-mtV_OjvS_wG6q-_9M5peKRBQ"
+          alt="score board image" class="score-img" />
+        <span class="score-card"></span>
+      </div>
+
+      <div class="quiz-section">
+          <form class="questions-form">
+            <p></p>
+            <label class="options">
+              <input id="one" type="radio" name="option-one" />
+              <span></span>
+            </label>
+            <label class="options">
+              <input id="two" type="radio" name="option-one" />
+              <span></span>
+            </label>
+            <label class="options">
+              <input id="three" type="radio" name="option-one" />
+              <span></span>
+            </label>
+            <label class="options">
+              <input id="four" type="radio" name="option-one" />
+              <span></span>
+            </label>
+           <section class="submit">
+            <input
+              type="button"
+              value="Submit Answer"
+              class="submit-button js-submit-button"
+            />
+            </section>
+            
+          </form>
+        </div>
+      </div>
+
+      <section class="feedback-section">
+        <div class="popup-box">
+          <button type="button" class="close-button js-close-button">X</button>
+          <img src="" class="feedback-icon" />
+          <span id="popup-text"></span>
+        </div>
+      </section>-->
+
+      <section class="end-section">
+        <h4></h4>
+        <div class="correct">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7HVtoF91KK85ZKPlBL0wzdW8URDpziD2PRsFZm4awGyD2BS-"
+            alt="correct-icon"
+          />
+          <span class="count"></span>
+        </div>
+        <div class="wrong">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGk_AHvtphypbgsJNN6qI1qX7v1b2vRXBgLwgGMcSZ95oZqaqug"
+            alt="wrong-icon"
+          />
+          <span class="count"></span>
+        </div>
+        <input
+          type="button"
+          class="startover-button js-startover-button"
+          value="Start Over"
+        />
+      </section>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
 </html>
