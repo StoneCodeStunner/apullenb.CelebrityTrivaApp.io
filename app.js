@@ -1,5 +1,6 @@
-const correctAnswerIcon = "/images/happy-paulwalker.jpg";
-const wrongAnswerIcon= "/images/sad-jenniferlopez.jpg";
+/* eslint-disable strict */
+const correctAnswerIcon = "images/happy-paulwalker.jpg";
+const wrongAnswerIcon= "images/sad-jenniferlopez.jpg";
 const warningIcon = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7WP9E3LDA10kP2Rk2enw-_kjI-iJd4kny8yH2kTrPR8hgrwtBg";
 
 let questionCounter = 0;
