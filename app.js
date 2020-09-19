@@ -7,68 +7,90 @@ const STORE = {
     {
       question: 'What Is Dwayne Johnsons Net Worth?',
       answers: ['80 million', '120 million', '250 million', '320 million'],
-      correctAnswer: 3
+      correctAnswer: 3,
     },
     {
       question: 'What Year Did Paul Walker Pass Away?',
       answers: ['2013', '2003', '2018', '2009'],
-      correctAnswer: 0
+      correctAnswer: 0,
     },
     {
       question: 'Who Sings The Chicka Chicka Slim Shady Song?',
       answers: ['Drake', 'Lil Wayne', 'Eminem', '50 Cent'],
-      correctAnswer: 2
+      correctAnswer: 2,
     },
     {
       question: 'What Is The Name Of The School In The Breakfast Club?',
-      answers: ['Beverly High', 'Shermer high', 'Houston County High', 'Montgomery High'],
-      correctAnswer: 1
+      answers: [
+        'Beverly High',
+        'Shermer high',
+        'Houston County High',
+        'Montgomery High',
+      ],
+      correctAnswer: 1,
     },
     {
       question: 'In What Year Did Brad Pitt Turn 30 Years Old?',
-      answers: ['2003', '2008', '1999', '2010'], correctAnswer: 0
+      answers: ['2003', '2008', '1999', '2010'],
+      correctAnswer: 0,
     },
     {
       question: 'Which Celebrity Is Known As JLo',
-      answers: ['John Lennon', 'Jennifer Lopez', 'Jared Leto', 'Justin Long'], correctAnswer: 1
+      answers: ['John Lennon', 'Jennifer Lopez', 'Jared Leto', 'Justin Long'],
+      correctAnswer: 1,
     },
     {
       question: 'Who Was Named People Magazines Sexiest Man Alive In 1991?',
-      answers: ['Brad Pitt', 'Blake Shelton', 'Patrick Swayze', 'George Strait'], correctAnswer: 2
+      answers: [
+        'Brad Pitt',
+        'Blake Shelton',
+        'Patrick Swayze',
+        'George Strait',
+      ],
+      correctAnswer: 2,
     },
     {
       question: 'What Is Drew Barrymores Real Middle Name?',
-      answers: ['Beth', 'Mckenzie', 'Leah', 'Blyth'], correctAnswer: 3
+      answers: ['Beth', 'Mckenzie', 'Leah', 'Blyth'],
+      correctAnswer: 3,
     },
     {
-      question: 'How Old Was Russell Crowe When He got His First Lead Role In A Film?',
-      answers: ['18', '25', '22', '16'], correctAnswer: 1
+      question:
+        'How Old Was Russell Crowe When He got His First Lead Role In A Film?',
+      answers: ['18', '25', '22', '16'],
+      correctAnswer: 1,
     },
     {
       question: 'Brothers Taylor, Isaac, and Zac make up which Band?',
-      answers: ['ZZ Top', 'The Police', 'Hanson', 'Green Day'], correctAnswer: 2
-    }
-    
+      answers: ['ZZ Top', 'The Police', 'Hanson', 'Green Day'],
+      correctAnswer: 2,
+    },
   ],
   score: 0,
   currentQuestion: 0,
   guess: 0,
   started: false,
-  hasFeedback: false
+  hasFeedback: false,
 };
 
 function generateQuestionElements(answers) {
   let answerChoices = '';
   answers.forEach((answer, i) => {
-  answerChoices += `<input type="radio" name="choice" value="${i}" id="${i}"/>
+    answerChoices += `<input type="radio" name="choice" value="${i}" id="${i}"/>
   <label for="${i}">${answer}</label><br/>`;
-});
-return answerChoices;
+  });
+  return answerChoices;
 }
 
-function generateQuizElementsString(question, answers, score, totalQuestions, questionNumber) {
+function generateQuizElementsString(
+  question,
+  answers,
+  score,
+  totalQuestions,
+  questionNumber
+) {
   let options = generateQuestionElements(answers);
-  
+
   return `<p class="score">Score: ${score}/${totalQuestions}</p>
   <p class="progress">Questions ${questionNumber + 1} of ${totalQuestions}</p>
   <section id="quiz">
@@ -87,7 +109,14 @@ function generateStartElementString() {
 </section>`;
 }
 
-function generateFeedbackElementString(feedback, guess, answer, score, totalQuestions, questionNumber) {
+function generateFeedbackElementString(
+  feedback,
+  guess,
+  answer,
+  score,
+  totalQuestions,
+  questionNumber
+) {
   let incorrectStyle = '';
   let guessString = `Your answer: ${guess}`;
   let answerString = ``;
@@ -95,9 +124,9 @@ function generateFeedbackElementString(feedback, guess, answer, score, totalQues
   <p class="correct-answer">${answerString}</p>`;
 
   if (feedback === 'Incorrect') {
-      incorrectStyle = `<p class="Incorrect"><img src="images/jennifer.jpg">${answerString}</p>`
+    incorrectStyle = `<p class="Incorrect"><img src="images/jennifer.jpg">${answerString}</p>`;
   } else {
-      output = `<p class="correct-answer"><img src="images/paul.jpg">${answerString}</p>`;
+    output = `<p class="correct-answer"><img src="images/paul.jpg">${answerString}</p>`;
   }
 
   return `
@@ -127,29 +156,41 @@ function render() {
   console.log(STORE.questions.length);
   if (!STORE.started) {
     console.log(STORE.started);
-      page = generateStartElementString();
-    } else if (STORE.hasFeedback) {
-      console.log('aa');
-        let feedback = STORE.hasFeedback;
-        let guess = STORE.guess;
-        let answer = STORE.questions[STORE.currentQuestion].correctAnswer;
-      page = generateFeedbackElementString(feedback, guess, answer, score, totalQuestions, questionNumber);
-    } else if (STORE.currentQuestion < STORE.questions.length) {
-      console.log('aaa');
-        let question = STORE.questions[STORE.currentQuestion].question;
-        let answers = STORE.questions[STORE.currentQuestion].answers;
-        page = generateQuizElementsString(question, answers, score, totalQuestions, questionNumber);
-    } else {
-      console.log('aaaa');
-      page = generateSummaryElementString(score, totalQuestions);
-    }
-    $("main").html(page);
+    page = generateStartElementString();
+  } else if (STORE.hasFeedback) {
+    console.log('aa');
+    let feedback = STORE.hasFeedback;
+    let guess = STORE.guess;
+    let answer = STORE.questions[STORE.currentQuestion].correctAnswer;
+    page = generateFeedbackElementString(
+      feedback,
+      guess,
+      answer,
+      score,
+      totalQuestions,
+      questionNumber
+    );
+  } else if (STORE.currentQuestion < STORE.questions.length) {
+    console.log('aaa');
+    let question = STORE.questions[STORE.currentQuestion].question;
+    let answers = STORE.questions[STORE.currentQuestion].answers;
+    page = generateQuizElementsString(
+      question,
+      answers,
+      score,
+      totalQuestions,
+      questionNumber
+    );
+  } else {
+    console.log('aaaa');
+    page = generateSummaryElementString(score, totalQuestions);
+  }
+  $('main').html(page);
 }
 
 /* listening to events */
 function startQuiz() {
-  
-  $('main').on('click', '#start-quiz', ()  => {
+  $('main').on('click', '#start-quiz', () => {
     console.log('aaab');
     STORE.started = true;
     render();
@@ -157,7 +198,7 @@ function startQuiz() {
 }
 
 function submitChoice() {
-  $('main').on ('submit', '#quiz form', e => {
+  $('main').on('submit', '#quiz form', (e) => {
     e.preventDefault();
     if (!$('input[type="radio"]:checked').val()) {
       alert('No answer selected');
@@ -177,7 +218,7 @@ function submitChoice() {
 }
 
 function nextQuestion() {
-  $('main').on ('click', '#next', () => {
+  $('main').on('click', '#next', () => {
     STORE.hasFeedback = false;
     STORE.currentQuestion = STORE.currentQuestion + 1;
     render();
@@ -185,7 +226,7 @@ function nextQuestion() {
 }
 
 function restartQuiz() {
-  $('main').on ('click', '#restart', () => {
+  $('main').on('click', '#restart', () => {
     STORE.started = false;
     STORE.score = 0;
     STORE.currentQuestion = 0;
@@ -202,4 +243,3 @@ function main() {
 }
 
 $(main);
-

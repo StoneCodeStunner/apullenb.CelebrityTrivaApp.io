@@ -152,15 +152,15 @@ input[type=submit]:hover {
 }
 
 #restart:hover {
-background-color: green;
+  background-color: green;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   #start {
     height: 35vw;
     width: 60vw;
   }
-  
+
 
   .score {
     margin: 10px 0 0 125px;
@@ -169,12 +169,13 @@ background-color: green;
   .progress {
     margin: 10px 0 10px 100px;
   }
+
   #quiz {
     height: 60vw;
   }
 
   #summary {
-    height:50vw;
+    height: 50vw;
     margin: 10px;
   }
 }
