@@ -1,4 +1,4 @@
-@media (min-width: 800px){
+@media (min-width: 800px) {
   body {
     display: flex;
     flex-direction: column;
@@ -11,37 +11,37 @@
   }
 
   header {
-    border: 2px solid white;
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.25);
+    background-color: black;
     border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 120px;
-    width: 500px;
-    margin: auto;
     background: url(images/stars.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 3px;
+    background-repeat: cover;
+    text-align: center;
   }
 
   #start {
-    border: 1px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 15vw;
-    width: 400px;
-    margin: auto 10% 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
+    padding: 5px;
   }
 
   #start-quiz {
-    color: white;
-    font-size: large;
-    background-color: blue;
-    border-radius: 10px;
-    margin: auto 0 10% 10% 10%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
   }
 
   #start-quiz:hover {
@@ -49,71 +49,86 @@
   }
 
   #quiz {
-    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.25);
+    background-color: black;
     border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: ;
-    width: 400px;
-    margin: auto;
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
   }
 
   #feedback {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 20vw;
-    width: 400px;
-    margin: auto 0 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
   }
 
 
 
   .score {
-    object-position: center;
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
     width: 100%;
-    margin: auto  0 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
   }
 
   .progress {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
     width: 100%;
-    margin: auto 0 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
   }
 
   #choices {
-    border-radius: 10px;
-    border: 2px solid white;
-    font-size: large;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
+  }
+
+  h2 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
+    padding: 10px;
+    width: 100%;
   }
 
 
   img {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     border: 2px solid rgb(0, 0, 0);
   }
 
   #next {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    margin: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
   }
 
   #next:hover {
@@ -132,26 +147,28 @@
   }
 
   input[type=submit]:hover {
+    color: white;
     background-color: green;
   }
 
   #summary {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 20vw;
-    width: 50vw;
-    margin: 20px 0 10px 65px;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
   }
 
   #restart {
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
-    border-radius: 10px;
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;
   }
 
   #restart:hover {
@@ -165,44 +182,46 @@
     flex-direction: column;
     align-items: center;
     margin: auto 0 10% 10% 10%;
-    background-color: rgb(0, 0, 255);
+    background-color: rgb(0, 255, 255);
     color: rgb(255, 253, 253);
     text-align: center;
     font-style: italic;
   }
 
   header {
-    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.25);
+    background-color: black;
     border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 120px;
-    width: 75vw;
-    margin: auto 0 10% 10% 10%;
     background: url(images/stars.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 3px;
+    background-repeat: cover;
+
   }
 
   #start {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 40vw;
-    width: 50vw;
-    margin: auto 0 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
-  }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: .8rem;
+    padding: 5px;
+    }
 
   #start-quiz {
     color: white;
-    font-size: large;
-    background-color: blue;
+    display: block;
+    position: relative;
+    margin-left: 7%;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
     border-radius: 10px;
-    margin: 10px 10px 10px 10px;
+    background-color: black;
+    padding: 10px;
   }
 
   #start-quiz:hover {
@@ -210,63 +229,92 @@
   }
 
   #quiz {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 60vw;
-    width: 70vw;
-    margin: auto 0 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 5px;
   }
 
 
 
   .score {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 5vw;
-    width: 20vw;
-    margin: auto 0 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    border-radius: 15px;
+    background-color: black;
+    padding: 10px;
   }
 
   .progress {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 5vw;
-    width: 30vw;
-    margin: auto 0 10% 10% 10%;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    border-radius: 15px;
+    background-color: black;
+    padding: 10px;
   }
 
   #choices {
-    border-radius: 10px;
-    border: 2px solid white;
-    font-size: large;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    border-radius: 5px;
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+  }
+
+  h2 {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    margin-right: 50%;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #feedback {
+    color: black;
   }
 
 
 
   img {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     border: 2px solid black;
+    width: 100%;
   }
 
   #next {
-    color: rgb(255, 255, 255);
-    background-color:black;
+    color: white;
+    display: block;
+    position: relative;
+    margin-left: 18%;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
     border-radius: 10px;
+    background-color: black;
+    padding: 10px;
   }
 
-  
+
 
   #next:hover {
     background-color: green;
@@ -280,7 +328,8 @@
     color: rgb(255, 255, 255);
     margin-top: 20px;
     border-radius: 10px;
-    background-color: rgb(0, 0, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
   }
 
   input[type=submit]:hover {
@@ -288,22 +337,32 @@
   }
 
   #summary {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 20vw;
-    width: 50vw;
-    margin: 20px 0 10px 65px;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    
   }
 
   #restart {
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
+    color: white;
+    display: block;
+    position: relative;
+    margin-left: 5%;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
     border-radius: 10px;
     background-color: black;
+    padding: 10px;
+    /*color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: black;*/
+
   }
 
   #restart:hover {
