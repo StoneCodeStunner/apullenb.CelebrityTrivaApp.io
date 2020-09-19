@@ -1,7 +1,4 @@
-@media {
-
-
-
+@media (min-width: 800px){
   body {
     display: flex;
     flex-direction: column;
@@ -32,7 +29,7 @@
     border-radius: 10px;
     box-shadow: 5px 5px #00000088;
     text-align: center;
-    height: 10vw;
+    height: 40vw;
     width: 40vw;
     margin: 20px;
     background-color: rgb(0, 0, 0);
@@ -191,8 +188,8 @@
     border-radius: 10px;
     box-shadow: 5px 5px #00000088;
     text-align: center;
-    height: 10vw;
-    width: 40vw;
+    height: 40vw;
+    width: 50vw;
     margin: 20px;
     background-color: rgb(0, 0, 0);
     padding: 3px;
@@ -215,8 +212,9 @@
     border-radius: 10px;
     box-shadow: 5px 5px #00000088;
     text-align: center;
-    height: 20vw;
+    height: 60vw;
     width: 70vw;
+    margin: 0 0 0 0;
     background-color: rgb(0, 0, 0);
     padding: 10px;
   }
@@ -230,7 +228,7 @@
     text-align: center;
     height: 5vw;
     width: 20vw;
-    margin: 10px 0 0 350px;
+    margin: 15px 125px 15px 125px;
     background-color: rgb(0, 0, 0);
     padding: 3px;
   }
@@ -242,7 +240,7 @@
     text-align: center;
     height: 5vw;
     width: 30vw;
-    margin: 10px 0 10px 275px;
+    margin: 15px 100px 15px 100px;
     background-color: rgb(0, 0, 0);
     padding: 3px;
   }
