@@ -96,9 +96,9 @@
     border-radius: 10px;
     box-shadow: 5px 5px #00000088;
     text-align: center;
-    height: 60vw;
+    height: 70vw;
     width: 50vw;
-    margin: 20px 0 10px 65px;
+    margin: 20px, 0, 0 ,65px;
     background-color: rgb(0, 0, 0);
     padding: 3px;
   }
@@ -112,6 +112,7 @@
     color: rgb(255, 255, 255);
     background-color: blue;
     border-radius: 10px;
+    margin: 20px 20px 20px 20px;
   }
 
   #next:hover {
@@ -251,28 +252,20 @@
     font-size: large;
   }
 
-  #feedback {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px #00000088;
-    text-align: center;
-    height: 60vw;
-    width: 50vw;
-    margin: 20px 0 10px 65px;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
-  }
+
 
   img {
     border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid black;
   }
 
   #next {
     color: rgb(255, 255, 255);
-    background-color: blue;
+    background-color:black;
     border-radius: 10px;
   }
+
+  
 
   #next:hover {
     background-color: green;
