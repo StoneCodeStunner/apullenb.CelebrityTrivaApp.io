@@ -224,10 +224,6 @@
     padding: 10px;
   }
 
-  #start-quiz:hover {
-    background-color: green;
-  }
-
   #quiz {
     color: white;
     display: flex;
@@ -264,15 +260,11 @@
   }
 
   #choices {
+    color: black;
     display: flex;
     flex-direction: column;
     margin-bottom: 0.5rem;
-    font-size: 0.8rem;
-    border: 0.1rem solid rgb(86, 165, 235, 0.25);
-    border-radius: 5px;
-    background-color: black;
-    padding: 10px;
-    width: 100%;
+    font-size: 0.9rem;
   }
 
   h2 {
@@ -311,12 +303,6 @@
     border-radius: 10px;
     background-color: black;
     padding: 10px;
-  }
-
-
-
-  #next:hover {
-    background-color: green;
   }
 
   fieldset {
