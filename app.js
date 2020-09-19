@@ -95,9 +95,9 @@ function generateFeedbackElementString(feedback, guess, answer, score, totalQues
   <p class="correct-answer">${answerString}</p>`;
 
   if (feedback === 'Incorrect') {
-      incorrectStyle = `<p class="Incorrect"><img src="/images/jennifer.jpg">${answerString}</p>`
+      incorrectStyle = `<p class="Incorrect"><img src="images/jennifer.jpg">${answerString}</p>`
   } else {
-      output = `<p class="correct-answer"><img src="/images/paul.jpg">${answerString}</p>`;
+      output = `<p class="correct-answer"><img src="images/paul.jpg">${answerString}</p>`;
   }
 
   return `
