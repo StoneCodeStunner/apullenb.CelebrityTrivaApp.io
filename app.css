@@ -155,15 +155,30 @@ input[type=submit]:hover {
   background-color: green;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
   #start {
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px #00000088;
+    text-align: center;
     height: 35vw;
     width: 60vw;
+    margin: 20px;
+    background-color: rgb(0, 0, 0);
+    padding: 3px;
   }
 
 
   .score {
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px #00000088;
+    text-align: center;
+    height: 5vw;
+    width: 20vw;
     margin: 10px 0 0 125px;
+    background-color: rgb(0, 0, 0);
+    padding: 3px;
   }
 
   .progress {
